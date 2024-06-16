@@ -22,6 +22,11 @@ class ScoringItem(BaseModel):
 
 with open('rf_model_ak.pkl', 'rb') as f:
     model = pickle.load(f)
+
+
+@app.get('/')
+async def hello_world():
+    return "Hello,World"
      
 
 @app.post('/')
